@@ -69,137 +69,137 @@ Then the image was noised by randn function provided by OpenCV as well.
 ### Set 1
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 1196 |13.992360| 302078442 | 25.21 |
-| Bicubic interpolation | 531  | 13.990716 | 302007448 | 25.21 |
-| Nearest Neighbor | 204 | 14.620173  | 329794029 | 24.83 |
-| Bilinear Interpolation | 210  | 13,856663 | 296247751 | 25.29 |
-| Guided Joint bilateral filter | 996329  | 14.600095 | 328888849 | 24.84 |
+| Pyramids | 1196 |17.992360| 302078442 | 25.21 |
+| Bicubic interpolation | 531  | 18.990716 | 302007448 | 25.21 |
+| Nearest Neighbor | 204 | 17.620173  | 329794029 | 24.83 |
+| Bilinear Interpolation | 210  | 17,856663 | 296247751 | 25.29 |
+| Guided Joint bilateral filter | 1321939  | 34.600095 | 1861244924 | 17.84 |
 
-![Set 1](1.png?raw=true "Title")
+![Set 1](1n.png?raw=true "Title")
 
 ### Set 2
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 98 |15.960355| 42986182 | 24.06 |
-| Bicubic interpolation | 148  | 15.580437 | 40964066 | 24.27 |
-| Nearest Neighbor | 70 | 16.560461  | 46279495 | 23.74 |
-| Bilinear Interpolation | 85  | 15.674798 | 41461757 | 24.22 |
-| Guided Joint bilateral filter | 996329  | 21.702905 | 79483965 | 21.40 |
+| Pyramids | 98 |21.960355| 75712356 | 24.06 |
+| Bicubic interpolation | 148  | 21.580437 | 80622493 | 24.27 |
+| Nearest Neighbor | 70 | 21.560461  | 89679495 | 23.74 |
+| Bilinear Interpolation | 85  | 21.674798 | 76712718 | 24.22 |
+| Guided Joint bilateral filter | 996329  | 52.702905 | 466660928 | 13.40 |
 
-![Set 2](2.png?raw=true "Title")
+![Set 2](2n.png?raw=true "Title")
 
 
 ### Set 3
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 95 |16.458340| 45710488 | 23.80 |
-| Bicubic interpolation | 144  | 15.940810 | 42880965 | 24.08 |
-| Nearest Neighbor | 70 | 17.113439  | 49421779 | 23.74 |
-| Bilinear Interpolation | 76  | 16.088521 | 43679335 | 24.00 |
-| Guided Joint bilateral filter | 112322  | 20.786934 | 72916305 | 21.77 |
+| Pyramids | 95 |21.458340| 45710488 | 23.80 |
+| Bicubic interpolation | 144  | 21.940810 | 42880965 | 24.08 |
+| Nearest Neighbor | 70 | 22.113439  | 49421779 | 23.74 |
+| Bilinear Interpolation | 76  | 21.088521 | 43679335 | 24.00 |
+| Guided Joint bilateral filter | 112322  | 51.786934 | 450135395 | 13.77 |
 
-![Set 3](3.png?raw=true "Title")
+![Set 3](3n.png?raw=true "Title")
 
 
 ### Set 4
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 629 |13.090580| 243853393 | 25.79 |
-| Bicubic interpolation | 286  | 13.074575 | 243257447 | 25.80 |
-| Nearest Neighbor | 151 | 13.733252  | 268384729 | 25.37 |
-| Bilinear Interpolation | 237  | 12.913076 | 237285082 | 25.91|
-| Guided Joint bilateral filter | 911235  | 9.174269 | 119771616 | 28.87 |
+| Pyramids | 629 |16.090580| 373185591 | 25.79 |
+| Bicubic interpolation | 286  | 16.074575 | 363257447 | 25.80 |
+| Nearest Neighbor | 151 | 17.733252  | 416539023 | 25.37 |
+| Bilinear Interpolation | 237  | 16.913076 | 385289587 | 25.91|
+| Guided Joint bilateral filter | 911235  | 23.174269 | 762612849 | 20.87 |
 
-![Set 4](4.png?raw=true "Title")
+![Set 4](4n.png?raw=true "Title")
 
 ### Set 5
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 631 |12.369720| 212641032 | 26.28 |
-| Bicubic interpolation | 354  | 12.740376 | 225575418 | 26.02 |
-| Nearest Neighbor | 141 | 13.165571 | 240883311 | 25.74 |
-| Bilinear Interpolation | 111  | 12.446151 | 215276902 | 26.23 |
-| Guided Joint bilateral filter | 881840  | 12.653169 | 222497898 | 26.08 |
+| Pyramids | 631 |14.369720| 312641032 | 26.28 |
+| Bicubic interpolation | 354  | 14.740376 | 310462526 | 26.02 |
+| Nearest Neighbor | 141 | 13.165571 | 343077550 | 25.74 |
+| Bilinear Interpolation | 111  | 14.446151 | 309571985 | 26.23 |
+| Guided Joint bilateral filter | 881840  | 29.653169 | 1170017905 | 18.08 |
 
-![Set 5](5.png?raw=true "Title")
+![Set 5](5n.png?raw=true "Title")
 
 ### Set 6
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 665 |14.049773| 287471921 | 25.17 |
-| Bicubic interpolation | 290  | 14.455255 | 304304474 | 24.93 |
-| Nearest Neighbor | 184 | 15.199287 | 336436627 | 24.49 |
-| Bilinear Interpolation | 177  | 14.340984 | 299512323 | 24.99 |
-| Guided Joint bilateral filter | 961519  | 12.711220 | 235305067 | 26.04 |
+| Pyramids | 665 |21.049773| 687471921 | 21.17 |
+| Bicubic interpolation | 290  | 21.455255 | 670378435 | 21.93 |
+| Nearest Neighbor | 184 | 22.199287 | 745402209 | 21.49 |
+| Bilinear Interpolation | 177  | 21.340984 | 677020343 | 21.99 |
+| Guided Joint bilateral filter | 961519  | 35.711220 | 1812172269 | 17.04 |
 
-![Set 6](6.png?raw=true "Title")
+![Set 6](6n.png?raw=true "Title")
 
 
 ### Set 7
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 224 |10.758835| 54011983 | 27.49 |
-| Bicubic interpolation | 291  | 10.999370 | 56454071 |27.30 |
-| Nearest Neighbor | 108 | 11.322470 | 59819389 | 27.05 |
-| Bilinear Interpolation | 90  | 10.592534 | 52355143 | 27.63 |
-| Guided Joint bilateral filter | 297336  | 15.528339 | 112514798 | 24.30 |
+| Pyramids | 224 |12.758835| 74011983 | 27.49 |
+| Bicubic interpolation | 291  | 12.999370 | 76763691 |27.30 |
+| Nearest Neighbor | 108 | 11.322470 | 66889826 | 27.05 |
+| Bilinear Interpolation | 90  | 12.592534 | 62355143 | 27.63 |
+| Guided Joint bilateral filter | 297336  | 15.528339 | 615979570 | 16.30 |
 
-![Set 7](7.png?raw=true "Title")
+![Set 7](7n.png?raw=true "Title")
 
 ### Set 8
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 215 |11.000845| 54896455 |27.30 |
-| Bicubic interpolation | 292  | 11.481489 | 59798273 |26.93 |
-| Nearest Neighbor | 106 | 12.100614 | 66421248 | 26.47 |
-| Bilinear Interpolation | 104  | 11.201854 | 56920970 | 27.14 |
-| Guided Joint bilateral filter | 285823  | 23.097404 | 242001765 | 20.85 |
+| Pyramids | 215 |15.000845| 113896455 |24.30 |
+| Bicubic interpolation | 292  | 16.481489 | 115087315 |23.93 |
+| Nearest Neighbor | 106 | 15.100614 | 130369208 | 23.47 |
+| Bilinear Interpolation | 104  | 16.201854 | 115272737 | 24.14 |
+| Guided Joint bilateral filter | 285823  | 56.097404 | 1470299527 | 13.85 |
 
-![Set 8](8.png?raw=true "Title")
+![Set 8](8n.png?raw=true "Title")
 
 ### Set 9
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 207 |10.968375| 56032175 |27.32 |
-| Bicubic interpolation | 308  | 11.147586 | 57878133 |27.18 |
+| Pyramids | 207 |11.968375| 56032175 |26.32 |
+| Bicubic interpolation | 308  | 12.147586 | 57878133 |27.18 |
 | Nearest Neighbor | 98 | 11.454452 | 61108478 | 26.95 |
-| Bilinear Interpolation | 98  | 10.790806 | 54232627 | 27.46 |
-| Guided Joint bilateral filter | 299558  | 21.362396 | 212545917 | 21.53 |
+| Bilinear Interpolation | 98  | 12.790806 | 54232627 | 27.46 |
+| Guided Joint bilateral filter | 299558  | 50.362396 | 1208752879 | 13.53 |
 
-![Set 9](9.png?raw=true "Title")
+![Set 9](9n.png?raw=true "Title")
 
 ### Set 10
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 226 |10.681547| 53238763 |27.55 |
-| Bicubic interpolation | 294  | 10.906091 | 55500623 |27.37 |
-| Nearest Neighbor | 130 | 11.272970 | 59297492 | 27.09 |
-| Bilinear Interpolation | 99  | 10.485704 | 51304420 | 27.71 |
-| Guided Joint bilateral filter | 293039  |16.593996 | 128487714 | 23.73 |
+| Pyramids | 226 |11.681547| 63238763 |27.55 |
+| Bicubic interpolation | 294  | 10.906091 | 65626528 |27.37 |
+| Nearest Neighbor | 130 | 11.272970 | 73267023 | 27.09 |
+| Bilinear Interpolation | 99  | 10.485704 | 62880755 | 27.71 |
+| Guided Joint bilateral filter | 293039  |39.593996 | 737103385 | 16.73 |
 
-![Set 10](10.png?raw=true "Title")
+![Set 10](10n.png?raw=true "Title")
 
 ### Set 11
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 219 |10.805926| 52968319 |27.45 |
-| Bicubic interpolation | 323  | 11.474994 | 59730635 |26.93 |
-| Nearest Neighbor | 103 | 11.900194 | 64239224 |26.61 |
-| Bilinear Interpolation | 99  | 11.110091 | 55992184 | 27.21 |
-| Guided Joint bilateral filter | 288297  |22.606673 | 231827790 | 21.04 |
+| Pyramids | 219 |15.805926| 106968319 |27.45 |
+| Bicubic interpolation | 323  | 15.474994 | 105596942 |26.93 |
+| Nearest Neighbor | 103 | 14.900194 | 116965095 |26.61 |
+| Bilinear Interpolation | 99  | 15.110091 | 103132080 | 27.21 |
+| Guided Joint bilateral filter | 288297  |55.606673 | 1378297443 |13.04 |
 
-![Set 11](11.png?raw=true "Title")
+![Set 11](11n.png?raw=true "Title")
 
 ### Set 12
 | Upsampling method | Microseconds | RMSE | SSD | PSNR |
 |--|--|--|--|--|
-| Pyramids | 215 |10.829905| 54727917 |27.43 |
-| Bicubic interpolation | 293  | 11.061950 | 57098273 |27.25 |
-| Nearest Neighbor | 107 | 11.412921 | 60778959 |26.98 |
-| Bilinear Interpolation | 92  | 10.656861 | 52992962 | 27.57 |
-| Guided Joint bilateral filter | 319612  |15.207826 | 107918008 |24.48 |
+| Pyramids | 215 |12.829905| 67282987 |27.43 |
+| Bicubic interpolation | 293  | 12.061950 | 75202724 |27.25 |
+| Nearest Neighbor | 107 | 11.412921 | 69778959 |26.98 |
+| Bilinear Interpolation | 92  | 12.656861 | 65384880 | 27.57 |
+| Guided Joint bilateral filter | 319612  |15.207826 | 598183907 |17.48 |
 
-![Set 12](12.png?raw=true "Title")
+![Set 12](12n.png?raw=true "Title")
 
 ## Optional tasks
 As optional tasks I implemented some OpenMP pragmas to make the code run faster. These pragmas can be visible in file with subtasks 1,2 and 3.
