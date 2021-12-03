@@ -128,6 +128,8 @@ int main(){
         // downsample image 4 times
         cv::pyrDown(depth_image, processed_image);
         cv::pyrDown(processed_image, processed_image);
+        cv::pyrDown(processed_image, processed_image);
+        cv::pyrDown(processed_image, processed_image);
         cv::Mat noise_image(processed_image.size(), processed_image.type());
         cv::randn(noise_image, 10, 5);
         processed_image = processed_image + noise_image;
@@ -190,7 +192,7 @@ int main(){
 
         cv::Mat filteredImage;
         start = std::chrono::high_resolution_clock::now();
-        filteredImage = upsampleImage(rgb_img, depth_image, 5, 3, 1);
+        filteredImage = upsampleImage(processed_image, depth_image, 5, 3, 1);
         stop = std::chrono::high_resolution_clock::now();
         duration = std::chrono::duration_cast<std::chrono::microseconds>(stop-start);
         std::cout << "Guided bilateral filter upsampling time: " << duration.count() << " microseconds" << std::endl;
