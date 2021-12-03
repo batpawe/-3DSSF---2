@@ -18,7 +18,6 @@ cv::Mat gaussianKernel(int window, float sigma_g)
             k_sum += kp_val;
         }
     }
-#pragma omp parallel for
     for (int i = 0; i < window; i++) {
         for (int j = 0; j < window; j++) {
             gKernel.at<float>(i, j) /= (float)k_sum;
@@ -123,6 +122,7 @@ int main(){
     for(int i = 1; i <= 12; i++){
         cv::Mat rgb_img = cv::imread("data/set_" + std::to_string(i) + "/left.png", 0);
         cv::Mat depth_image = cv::imread("data/set_" + std::to_string(i) + "/disp.png", 0);
+        cv::Mat processed_image_temp;
         cv::Mat processed_image;
 
         // downsample image 4 times
@@ -139,20 +139,20 @@ int main(){
         auto stop = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop-start);
 
-        std::cout << "Set_"+ std::to_string(i) << std::endl;
-
-        cv::Mat pyramids(depth_image.size(), depth_image.type());
-        start = std::chrono::high_resolution_clock::now();
-        cv::pyrUp(processed_image, pyramids, cv::Size(processed_image.cols*2, processed_image.rows*2));
-        cv::pyrUp(pyramids, pyramids, cv::Size(pyramids.cols*2, pyramids.rows*2));
-        stop = std::chrono::high_resolution_clock::now();
-        duration = std::chrono::duration_cast<std::chrono::microseconds>(stop-start);
-        std::cout << "Pyramids upsampling time: " << duration.count() << " microseconds" << std::endl;
-        std::cout << "Metrics:" << std::endl;
-        std::cout << "RMSE: " + std::to_string(RMSE(depth_image, pyramids)) << std::endl;
-        std::cout << "SSD: " + std::to_string(SSD(depth_image, pyramids)) << std::endl;
-        std::cout << "PSNR: " + std::to_string(PSNR(depth_image, pyramids)) << std::endl;
-        cv::imwrite( "data/set_" + std::to_string(i) + "/res_1.png", pyramids);
+//        std::cout << "Set_"+ std::to_string(i) << std::endl;
+//
+//        cv::Mat pyramids(depth_image.size(), depth_image.type());
+//        start = std::chrono::high_resolution_clock::now();
+//        cv::pyrUp(processed_image, pyramids, cv::Size(processed_image.cols*2, processed_image.rows*2));
+//        cv::pyrUp(pyramids, pyramids, cv::Size(pyramids.cols*2, pyramids.rows*2));
+//        stop = std::chrono::high_resolution_clock::now();
+//        duration = std::chrono::duration_cast<std::chrono::microseconds>(stop-start);
+//        std::cout << "Pyramids upsampling time: " << duration.count() << " microseconds" << std::endl;
+//        std::cout << "Metrics:" << std::endl;
+//        std::cout << "RMSE: " + std::to_string(RMSE(depth_image, pyramids)) << std::endl;
+//        std::cout << "SSD: " + std::to_string(SSD(depth_image, pyramids)) << std::endl;
+//        std::cout << "PSNR: " + std::to_string(PSNR(depth_image, pyramids)) << std::endl;
+//        cv::imwrite( "data/set_" + std::to_string(i) + "/res_1.png", pyramids);
 
         cv::Mat bicubic_interpolation(depth_image.size(), depth_image.type());
         start = std::chrono::high_resolution_clock::now();
@@ -192,7 +192,7 @@ int main(){
 
         cv::Mat filteredImage;
         start = std::chrono::high_resolution_clock::now();
-        filteredImage = upsampleImage(processed_image, depth_image, 5, 3, 1);
+        filteredImage = upsampleImage(rgb_img, processed_image, 4, 3, 1);
         stop = std::chrono::high_resolution_clock::now();
         duration = std::chrono::duration_cast<std::chrono::microseconds>(stop-start);
         std::cout << "Guided bilateral filter upsampling time: " << duration.count() << " microseconds" << std::endl;
