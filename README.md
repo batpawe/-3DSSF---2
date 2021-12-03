@@ -60,10 +60,9 @@ Then the image was noised by randn function provided by OpenCV as well.
 
 **The order of each image is as follows:**
 
-| Ground truth | Lower resolution image | Pyramids upsampling  |
+| Ground truth | Lower resolution image | Bicubic interpolation |
 |--|--|--|
-| **Bicubic interpolation** | **Nearest neighbor** | **Bilinear interpolation** |
-| **Guided bilateral filtering upsampling** | **Original rgb image** | **--** |
+| **Nearest neighbor** | **Bilinear interpolation**  | **Guided bilateral filtering upsampling**  |
 
 
 ### Set 1
